@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.1 on win32)" generated="20241020 22:55:21.815" rpa="false" schemaversion="4">
+<suite id="s1" name="Test Robot" source="C:\Users\User\Desktop\TestSelectProduct\test_robot.robot">
+<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
+<arg>https://www.saucedemo.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20241020 22:55:21.970" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<msg timestamp="20241020 22:55:22.249" level="WARN">The chromedriver version (129.0.6668.100) detected in PATH at C:\chromedriver\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.59); currently, chromedriver 130.0.6723.58 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
+<status status="PASS" starttime="20241020 22:55:21.970" endtime="20241020 22:55:25.059"/>
+</kw>
+<test id="s1-t1" name="TC-01-Login" line="15">
+<kw name="Login">
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20241020 22:55:25.560" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20241020 22:55:25.060" endtime="20241020 22:55:25.560"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20241020 22:55:25.562" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20241020 22:55:25.560" endtime="20241020 22:55:25.639"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20241020 22:55:26.141" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20241020 22:55:25.639" endtime="20241020 22:55:26.141"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20241020 22:55:26.141" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20241020 22:55:26.141" endtime="20241020 22:55:26.198"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20241020 22:55:26.199" level="INFO">Clicking button '//*[@type='submit']'.</msg>
+<status status="PASS" starttime="20241020 22:55:26.198" endtime="20241020 22:55:26.254"/>
+</kw>
+<status status="PASS" starttime="20241020 22:55:25.060" endtime="20241020 22:55:26.254"/>
+</kw>
+<kw name="SelectProducts">
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20241020 22:55:27.255" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20241020 22:55:26.255" endtime="20241020 22:55:27.255"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=add-to-cart-sauce-labs-bike-light</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20241020 22:55:27.256" level="INFO">Clicking button 'id=add-to-cart-sauce-labs-bike-light'.</msg>
+<status status="PASS" starttime="20241020 22:55:27.256" endtime="20241020 22:55:27.293"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20241020 22:55:28.293" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20241020 22:55:27.293" endtime="20241020 22:55:28.293"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=add-to-cart-sauce-labs-backpack</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20241020 22:55:28.294" level="INFO">Clicking button 'id=add-to-cart-sauce-labs-backpack'.</msg>
+<status status="PASS" starttime="20241020 22:55:28.293" endtime="20241020 22:55:28.333"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20241020 22:55:29.333" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20241020 22:55:28.333" endtime="20241020 22:55:29.333"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=add-to-cart-sauce-labs-onesie</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20241020 22:55:29.335" level="INFO">Clicking button 'id=add-to-cart-sauce-labs-onesie'.</msg>
+<status status="PASS" starttime="20241020 22:55:29.333" endtime="20241020 22:55:29.374"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20241020 22:55:30.375" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20241020 22:55:29.375" endtime="20241020 22:55:30.375"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//a[@class="shopping_cart_link"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20241020 22:55:30.375" level="INFO">Clicking element 'xpath=//a[@class="shopping_cart_link"]'.</msg>
+<status status="PASS" starttime="20241020 22:55:30.375" endtime="20241020 22:55:30.412"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=checkout</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20241020 22:55:30.413" level="INFO">Clicking button 'id=checkout'.</msg>
+<status status="PASS" starttime="20241020 22:55:30.413" endtime="20241020 22:55:30.455"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20241020 22:55:30.955" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20241020 22:55:30.455" endtime="20241020 22:55:30.955"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=first-name</arg>
+<arg>${FirstName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20241020 22:55:30.957" level="INFO">Typing text 'Nutta' into text field 'id=first-name'.</msg>
+<status status="PASS" starttime="20241020 22:55:30.955" endtime="20241020 22:55:31.019"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20241020 22:55:31.520" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20241020 22:55:31.019" endtime="20241020 22:55:31.520"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=last-name</arg>
+<arg>${LastName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20241020 22:55:31.521" level="INFO">Typing text 'Pong' into text field 'id=last-name'.</msg>
+<status status="PASS" starttime="20241020 22:55:31.520" endtime="20241020 22:55:31.575"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20241020 22:55:32.076" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20241020 22:55:31.575" endtime="20241020 22:55:32.076"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=postal-code</arg>
+<arg>${ZipCode}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20241020 22:55:32.077" level="INFO">Typing text '20008' into text field 'id=postal-code'.</msg>
+<status status="PASS" starttime="20241020 22:55:32.076" endtime="20241020 22:55:32.134"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20241020 22:55:32.635" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20241020 22:55:32.134" endtime="20241020 22:55:32.635"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=continue</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20241020 22:55:32.636" level="INFO">Clicking button 'id=continue'.</msg>
+<status status="PASS" starttime="20241020 22:55:32.635" endtime="20241020 22:55:32.693"/>
+</kw>
+<status status="PASS" starttime="20241020 22:55:26.254" endtime="20241020 22:55:32.693"/>
+</kw>
+<kw name="Check and buy">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css=.inventory_item_name</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20241020 22:55:32.694" endtime="20241020 22:55:32.709"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${product_names}</var>
+<arg>return Array.from(document.querySelectorAll('.inventory_item_name')).map(element =&gt; element.textContent)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20241020 22:55:32.709" level="INFO">Executing JavaScript:
+return Array.from(document.querySelectorAll('.inventory_item_name')).map(element =&gt; element.textContent)
+Without any arguments.</msg>
+<msg timestamp="20241020 22:55:32.712" level="INFO">${product_names} = ['Sauce Labs Bike Light', 'Sauce Labs Backpack', 'Sauce Labs Onesie']</msg>
+<status status="PASS" starttime="20241020 22:55:32.709" endtime="20241020 22:55:32.712"/>
+</kw>
+<for flavor="IN">
+<var>${expected_name}</var>
+<value>@{EXPECTED_ITEMS}</value>
+<iter>
+<var name="${expected_name}">Sauce Labs Onesie</var>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"'${expected_name}'" in "${product_names}"</arg>
+<arg>Log</arg>
+<arg>'${expected_name}' exists in product names</arg>
+<arg>ELSE</arg>
+<arg>Fail</arg>
+<arg>'${expected_name}' does not exist in product names</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>'${expected_name}' exists in product names</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20241020 22:55:32.713" level="INFO">'Sauce Labs Onesie' exists in product names</msg>
+<status status="PASS" starttime="20241020 22:55:32.713" endtime="20241020 22:55:32.713"/>
+</kw>
+<status status="PASS" starttime="20241020 22:55:32.712" endtime="20241020 22:55:32.713"/>
+</kw>
+<status status="PASS" starttime="20241020 22:55:32.712" endtime="20241020 22:55:32.713"/>
+</iter>
+<iter>
+<var name="${expected_name}">Sauce Labs Backpack</var>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"'${expected_name}'" in "${product_names}"</arg>
+<arg>Log</arg>
+<arg>'${expected_name}' exists in product names</arg>
+<arg>ELSE</arg>
+<arg>Fail</arg>
+<arg>'${expected_name}' does not exist in product names</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>'${expected_name}' exists in product names</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20241020 22:55:32.713" level="INFO">'Sauce Labs Backpack' exists in product names</msg>
+<status status="PASS" starttime="20241020 22:55:32.713" endtime="20241020 22:55:32.713"/>
+</kw>
+<status status="PASS" starttime="20241020 22:55:32.713" endtime="20241020 22:55:32.713"/>
+</kw>
+<status status="PASS" starttime="20241020 22:55:32.713" endtime="20241020 22:55:32.713"/>
+</iter>
+<iter>
+<var name="${expected_name}">Sauce Labs Bike Light</var>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"'${expected_name}'" in "${product_names}"</arg>
+<arg>Log</arg>
+<arg>'${expected_name}' exists in product names</arg>
+<arg>ELSE</arg>
+<arg>Fail</arg>
+<arg>'${expected_name}' does not exist in product names</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>'${expected_name}' exists in product names</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20241020 22:55:32.713" level="INFO">'Sauce Labs Bike Light' exists in product names</msg>
+<status status="PASS" starttime="20241020 22:55:32.713" endtime="20241020 22:55:32.713"/>
+</kw>
+<status status="PASS" starttime="20241020 22:55:32.713" endtime="20241020 22:55:32.713"/>
+</kw>
+<status status="PASS" starttime="20241020 22:55:32.713" endtime="20241020 22:55:32.713"/>
+</iter>
+<status status="PASS" starttime="20241020 22:55:32.712" endtime="20241020 22:55:32.713"/>
+</for>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>name=finish</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20241020 22:55:32.714" level="INFO">Clicking button 'name=finish'.</msg>
+<status status="PASS" starttime="20241020 22:55:32.713" endtime="20241020 22:55:32.747"/>
+</kw>
+<status status="PASS" starttime="20241020 22:55:32.694" endtime="20241020 22:55:32.747"/>
+</kw>
+<status status="PASS" starttime="20241020 22:55:25.059" endtime="20241020 22:55:32.747"/>
+</test>
+<status status="PASS" starttime="20241020 22:55:21.817" endtime="20241020 22:55:32.748"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test Robot">Test Robot</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20241020 22:55:22.249" level="WARN">The chromedriver version (129.0.6668.100) detected in PATH at C:\chromedriver\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.59); currently, chromedriver 130.0.6723.58 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>

@@ -1,0 +1,3 @@
+cd C:\Users\User\Desktop\TestSelectProduct
+
+robot test_robot.robot
