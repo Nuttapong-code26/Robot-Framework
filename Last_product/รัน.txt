@@ -1,0 +1,8 @@
+
+รัน
+cd C:\Users\User\Desktop\Last_product
+robot Ro+1.robot
+
+
+*************
+robot --outputdir C:\Users\User\Desktop\Last_product\Ro+1.robot
