@@ -6,7 +6,7 @@ Library         String
 Library         Math
 
 *** Variables ***
-${tax}  8.0
+${tax}  8.00615858353/100
 &{product_sauce_labs_bike_light}    title=Sauce Labs Bike Light      price=9.99    
 &{product_sauce_labs_bolt_t-Shirt}    title=Sauce Labs Bolt T-Shirt    price=15.99   
 
@@ -265,16 +265,20 @@ TC_01
     Page Should Contain Element     //div[@data-test='subtotal-label'][text()='Item total: $' and text()='${item_total}']
 
     #step 5.5.3 Verify that tax = ____
-    ${tax_from_item_total}       Evaluate       ${item_total} * ${tax} /100
-    ${tax_from_item_total_end}   Evaluate       round(${tax_from_item_total} + 0.005, 2)
+    ${tax_from_item_total}       Evaluate       ${item_total} * ${tax}
+    #${tax_from_item_total_end}   Evaluate       round(${tax_from_item_total} + 0.005, 2)               # แบบ 1 มันจะเป็นการปัดเศษขึ้นและแสดงทศนิยม 2 ตำแหน่ง  
     #log     ${tax_from_item_total}
     #log     ${tax_from_item_total_end} 
-    Page Should Contain Element     //div[@data-test='tax-label'][text()='Tax: $' and text()='${tax_from_item_total_end}']
+    #Page Should Contain Element     //div[@data-test='tax-label'][text()='Tax: $' and text()='${tax_from_item_total_end}']
+
+
+    ${tax_from_item_total_end2}     Format String   {:.2f}     ${tax_from_item_total}                                           #แบบ 2 จัดโดย format string ให้เป็น ทศนิยม 2 ตำแหน่ง
+    Page Should Contain Element     //div[@data-test='tax-label'][text()='Tax: $' and text()='${${tax_from_item_total_end2}}']      
 
     #step 5.5.4 Verify that Total = ___
-    ${last_total}               Evaluate    ${item_total} + ${tax_from_item_total_end}
-    ${last_total_end}   Evaluate       round(${last_total}, 2)
-     #$log     ${last_total_end}
+    ${last_total}               Evaluate    ${item_total} + ${tax_from_item_total_end2}
+    ${last_total_end}     Format String   {:.2f}     ${last_total}   
+
     Page Should Contain Element     //div[@data-test='total-label'][text()='Total: $' and text()='${last_total_end}']
 
     #step 5.6: Click Finish
